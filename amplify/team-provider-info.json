@@ -10,6 +10,11 @@
       "StackName": "amplify-cidercrafter-dev-220018",
       "StackId": "arn:aws:cloudformation:us-west-2:117493975281:stack/amplify-cidercrafter-dev-220018/7b06c330-18da-11eb-8058-066c190885f7",
       "AmplifyAppId": "dgvr7e1s2up6h"
+    },
+    "categories": {
+      "auth": {
+        "cidercrafter82db617c": {}
+      }
     }
   }
 }
