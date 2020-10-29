@@ -45,11 +45,11 @@ const signUpFormFields = [
 ];
 
 const AuthStateApp = () => {
-  const [authState, setAuthState] = React.useState();
-  const [user, setUser] = React.useState();
+  const [authState, setAuthState] = React.useState<AuthState | undefined>();
+  const [user, setUser] = React.useState<any>();
 
   React.useEffect(() => {
-      return onAuthUIStateChange((nextAuthState, authData) => {
+      return onAuthUIStateChange((nextAuthState: AuthState, authData) => {
           setAuthState(nextAuthState);
           setUser(authData)
       });
@@ -59,7 +59,7 @@ return authState === AuthState.SignedIn && user ? (
     <App />
   ) : (
     <AmplifyAuthenticator
-      initialAuthState="signup"
+      initialAuthState={AuthState.SignUp}
       usernameAlias="email"
     >
       <AmplifySignUp
