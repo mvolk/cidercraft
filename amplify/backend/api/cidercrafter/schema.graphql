@@ -1,6 +1,7 @@
 type Pipsqueak
   @model
   @key(fields: ["arn"])
+  @auth(rules: [{ allow: groups, groups: ["Admin"] }])
 {
   arn: String!
   name: String
