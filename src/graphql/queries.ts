@@ -17,6 +17,7 @@ export const syncPipsqueaks = /* GraphQL */ `
     ) {
       items {
         arn
+        name
         description
         _version
         _deleted
@@ -33,6 +34,7 @@ export const getPipsqueak = /* GraphQL */ `
   query GetPipsqueak($arn: String!) {
     getPipsqueak(arn: $arn) {
       arn
+      name
       description
       _version
       _deleted
@@ -59,6 +61,7 @@ export const listPipsqueaks = /* GraphQL */ `
     ) {
       items {
         arn
+        name
         description
         _version
         _deleted

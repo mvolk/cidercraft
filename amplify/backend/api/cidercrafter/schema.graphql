@@ -3,5 +3,6 @@ type Pipsqueak
   @key(fields: ["arn"])
 {
   arn: String!
+  name: String
   description: String
 }

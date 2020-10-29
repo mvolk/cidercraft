@@ -9,6 +9,7 @@ export const createPipsqueak = /* GraphQL */ `
   ) {
     createPipsqueak(input: $input, condition: $condition) {
       arn
+      name
       description
       _version
       _deleted
@@ -25,6 +26,7 @@ export const updatePipsqueak = /* GraphQL */ `
   ) {
     updatePipsqueak(input: $input, condition: $condition) {
       arn
+      name
       description
       _version
       _deleted
@@ -41,6 +43,7 @@ export const deletePipsqueak = /* GraphQL */ `
   ) {
     deletePipsqueak(input: $input, condition: $condition) {
       arn
+      name
       description
       _version
       _deleted

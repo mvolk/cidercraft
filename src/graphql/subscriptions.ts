@@ -6,6 +6,7 @@ export const onCreatePipsqueak = /* GraphQL */ `
   subscription OnCreatePipsqueak {
     onCreatePipsqueak {
       arn
+      name
       description
       _version
       _deleted
@@ -19,6 +20,7 @@ export const onUpdatePipsqueak = /* GraphQL */ `
   subscription OnUpdatePipsqueak {
     onUpdatePipsqueak {
       arn
+      name
       description
       _version
       _deleted
@@ -32,6 +34,7 @@ export const onDeletePipsqueak = /* GraphQL */ `
   subscription OnDeletePipsqueak {
     onDeletePipsqueak {
       arn
+      name
       description
       _version
       _deleted

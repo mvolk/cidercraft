@@ -4,11 +4,13 @@
 
 export type CreatePipsqueakInput = {
   arn: string,
+  name?: string | null,
   description?: string | null,
   _version?: number | null,
 };
 
 export type ModelPipsqueakConditionInput = {
+  name?: ModelStringInput | null,
   description?: ModelStringInput | null,
   and?: Array< ModelPipsqueakConditionInput | null > | null,
   or?: Array< ModelPipsqueakConditionInput | null > | null,
@@ -57,6 +59,7 @@ export type ModelSizeInput = {
 
 export type UpdatePipsqueakInput = {
   arn: string,
+  name?: string | null,
   description?: string | null,
   _version?: number | null,
 };
@@ -68,6 +71,7 @@ export type DeletePipsqueakInput = {
 
 export type ModelPipsqueakFilterInput = {
   arn?: ModelStringInput | null,
+  name?: ModelStringInput | null,
   description?: ModelStringInput | null,
   and?: Array< ModelPipsqueakFilterInput | null > | null,
   or?: Array< ModelPipsqueakFilterInput | null > | null,
@@ -89,6 +93,7 @@ export type CreatePipsqueakMutation = {
   createPipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
@@ -107,6 +112,7 @@ export type UpdatePipsqueakMutation = {
   updatePipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
@@ -125,6 +131,7 @@ export type DeletePipsqueakMutation = {
   deletePipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
@@ -147,6 +154,7 @@ export type SyncPipsqueaksQuery = {
     items:  Array< {
       __typename: "Pipsqueak",
       arn: string,
+      name: string | null,
       description: string | null,
       _version: number,
       _deleted: boolean | null,
@@ -167,6 +175,7 @@ export type GetPipsqueakQuery = {
   getPipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
@@ -190,6 +199,7 @@ export type ListPipsqueaksQuery = {
     items:  Array< {
       __typename: "Pipsqueak",
       arn: string,
+      name: string | null,
       description: string | null,
       _version: number,
       _deleted: boolean | null,
@@ -206,6 +216,7 @@ export type OnCreatePipsqueakSubscription = {
   onCreatePipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
@@ -219,6 +230,7 @@ export type OnUpdatePipsqueakSubscription = {
   onUpdatePipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
@@ -232,6 +244,7 @@ export type OnDeletePipsqueakSubscription = {
   onDeletePipsqueak:  {
     __typename: "Pipsqueak",
     arn: string,
+    name: string | null,
     description: string | null,
     _version: number,
     _deleted: boolean | null,
