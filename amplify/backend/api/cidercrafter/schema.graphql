@@ -1,0 +1,7 @@
+type Pipsqueak
+  @model
+  @key(fields: ["arn"])
+{
+  arn: String!
+  description: String
+}

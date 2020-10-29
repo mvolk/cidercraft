@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "cidercrafter",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcidercrafter82db617c",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
